@@ -1,3 +1,14 @@
-<p>
-  album-create works!
-</p>
+<div class="row">
+	<div class="col-md-12">
+		<h1>Meus Albuns</h1>
+	</div>
+	<div class="col-md-12">
+		<div class="form-group">
+			<label for="name">Nome</label>
+			<input class="form-control" type="text" id="name" placeholder="Informe o nome do album" [(ngModel)]="name">
+		</div>
+		<div class="form-group">
+			<button class="btn btn-primary" (click)="create()">Criar</button>
+		</div>
+	</div>
+</div>

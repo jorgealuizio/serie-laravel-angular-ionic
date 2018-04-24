@@ -1,3 +1,18 @@
-<p>
-  photo-create works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <h1>Incluir Foto no Album <b>{{album?.name}}</b></h1>
+  </div>
+  <div class="col-md-12">
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input class="form-control" type="text" id="name" placeholder="Informe o nome da foto" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label for="name">Imagem</label>
+      <input class="form-control" type="file" id="file_name" (change)="handleFile($event.target.files[0])">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" (click)="upload()">Fazer Upload</button>
+    </div>
+  </div>
+</div>

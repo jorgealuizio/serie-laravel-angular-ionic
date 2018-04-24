@@ -3,6 +3,14 @@
 		<h1>Meus Albuns</h1>
 	</div>
 	<div class="col-md-12">
-		<button class="btn btn-primary">Criar Album</button>
+		<button class="btn btn-primary" [routerLink]="['create']">Criar Album</button>
+	</div>
+
+	<div class="card col-md-3" *ngFor="let album of albums">
+		<div class="card-body">
+			<h3>
+				<a [routerLink]="[album.id,'photos','create']">{{ album.name }}</a>
+			</h3>
+		</div>
 	</div>
 </div>

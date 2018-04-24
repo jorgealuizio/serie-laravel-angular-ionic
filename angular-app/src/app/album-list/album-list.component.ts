@@ -15,7 +15,7 @@ export class AlbumListComponent implements OnInit {
   // API Laravel: http://localhost:8000
   ngOnInit() {
   	this.http.get<any>('http://localhost:8000/api/albums')
-  		.subscribe(data => this->albums = data);
+  		.subscribe(data => this.albums = data);
   }
 
 }
